@@ -1,15 +1,13 @@
-import GithubUserList from "./assets/GithubUserList";
 import { Routes, Route } from "react-router-dom";
-
-
+import GitHubUser from "./assets/GithubUser";
 function App() {
   return (
-      <>
-        <h1>Welcome to my application!</h1>
-        <Routes>
-          <Route path="/users/:username" element={<GithubUserList login="Camrotez" />}/>
-        </Routes>
-      </>
+    <>
+      <Routes>
+        <Route path="/:username" element={<GitHubUser />} />
+      </Routes>
+    </>
   );
 }
-export default App
+
+export default App;
